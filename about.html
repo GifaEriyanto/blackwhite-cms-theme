@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/froala_editor.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/froala_style.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/code_view.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/colors.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/emoticons.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/image_manager.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/image.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/line_breaker.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/table.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/char_counter.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/video.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/fullscreen.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/file.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/quick_insert.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+</head>
+<body>
+
+	<div class="page-loader">
+		<div class="loading">Please Waiting</div>
+	</div>
+
+	<header>
+		<ul class="menu">
+			<li><a href="index.html" lang-id="Dasbor">Dashboard</a></li>
+			<li><a href="menu.html" lang-id="Menu">Menus</a></li>
+			<li><a href="master.html" lang-id="Master">Master</a></li>
+			<li class="actived"><a href="about.html" lang-id="Profil">About</a></li>
+			<li><a href="post.html" lang-id="Artikel">Post</a></li>
+			<li><a href="page.html" lang-id="Halaman">Page</a></li>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2016 Media SAKTI
+		</div>
+	</header>
+
+	<section class="main">
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#" class="toggle"></a>
+				</li>
+				<li class="dropdown"><a href="#"><span lang-id="Notif">Notif</span> <span class="badge">3</span></a>
+					<ul class="big">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Esse odio quae quis, voluptatum numquam, in.</a></li>
+						<li><a href="notification.html" lang-id="Lihat Semua">See More</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu right">
+				<li class="dropdown dropdown-right"><a href="#">Hi <b class="name">Gifa <span class="last">Eriyanto</span></b></a>
+					<ul>
+						<li><a href="account.html" lang-id="Pengaturan Akun">Account Setting</a></li>
+						<li><a href="login.html" lang-id="Keluar">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<section class="row">
+				<div class="col-md-12">
+					<div class="panel-custom">
+						<div class="panel-head">
+							<h3 class="tag" lang-id="Profil Perusahaan Anda">Your Company Profile</h3>
+							<h2 class="title" lang-id="Profil">About</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+				<li role="presentation" class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab" lang-id="Informasi Dasar">Basic Info</a></li>
+				<li role="presentation"><a href="#team" aria-controls="team" role="tab" data-toggle="tab" lang-id="Tim">Team</a></li>
+				<li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab" lang-id="Kontak">Contact</a></li>
+			</ul>
+
+			<br>
+			<br>
+
+			<!-- Tab panes -->
+			<section class="row tab-content">
+				<div role="tabpanel" class="tab-pane active" id="basic">
+					<form action="" class="form-custom">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Nama Perusahaan">Company Name</label>
+								<input type="text" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Didirikan pada">Founded on</label>
+								<input type="date" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Industri <span class='caption'>Pisahkan dengan koma(,)</span>">Industry <span class="caption">Separated by commas(,)</span></label>
+								<input type="text" class="form-input" placeholder="ex: Industry1, Industry2, Industry3">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Logo">Logo</label>
+								<input type="file" class="form-input" id="img" accept="image/*">
+								<label for="img" id="img-preview"></label>
+							</div>
+						</div>
+
+						<div class="col-md-8">
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Deskripsi Perusahaan">Company Description</label>
+								<div id="edit"></div>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<button class="btn-custom" lang-id="Simpan">Save</button>
+						</div>
+					</form>
+				</div>
+
+				<div role="tabpanel" class="tab-pane" id="team">
+					<article class="col-md-3 col-sm-12 col-xs-12">
+						<div class="new-team">
+							<h2 lang-id="Tambah Anggota Baru">Add a new member</h2>
+							<form action="" class="form-custom">
+								<div class="form-group">
+									<label class="form-label" for="" lang-id="Nama">Name</label>
+									<input type="text" class="form-input">
+								</div>
+
+								<div class="form-group">
+									<label class="form-label" for="" lang-id="Jabatan">Position</label>
+									<input type="text" class="form-input">
+								</div>
+
+								<div class="form-group">
+									<label class="form-label" for="" lang-id="Foto">Photo</label>
+									<input type="file" class="form-input">
+								</div>
+
+								<button class="btn-custom" lang-id="Simpan">Save</button>
+							</form>
+						</div>
+					</article>
+
+					<article class="col-md-3 col-xs-6">
+						<div class="img" style="background-image: url(assets/img/team/1.jpg)" data-url="assets/img/team/1.jpg"></div>
+						<h1 class="title">Gifa Eriyanto</h1>
+						<p class="major">CTO</p>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="1" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-3 col-xs-6">
+						<div class="img" style="background-image: url(assets/img/team/2.jpg)" data-url="assets/img/team/2.jpg"></div>
+						<h1 class="title">Akbar Abustang</h1>
+						<p class="major">Web Developer</p>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="2" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-3 col-xs-6">
+						<div class="img" style="background-image: url(assets/img/team/3.jpg)" data-url="assets/img/team/3.jpg"></div>
+						<h1 class="title">Alfian Labeda</h1>
+						<p class="major">Graphic Designer</p>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="3" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-3 col-xs-6">
+						<div class="img" style="background-image: url(assets/img/team/4.jpg)" data-url="assets/img/team/4.jpg"></div>
+						<h1 class="title">Muhammad Lutfi</h1>
+						<p class="major">Web Developer</p>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="4" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-3 col-xs-6">
+						<div class="img" style="background-image: url(assets/img/team/5.jpg)" data-url="assets/img/team/5.jpg"></div>
+						<h1 class="title">Guntur, S.Kom.</h1>
+						<p class="major">CMO</p>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="5" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-3 col-xs-6">
+						<div class="img" style="background-image: url(assets/img/team/6.jpg)" data-url="assets/img/team/6.jpg"></div>
+						<h1 class="title">Erwin Riyanto</h1>
+						<p class="major">Web Developer</p>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="6" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+				</div>
+
+				<div role="tabpanel" class="tab-pane" id="contact">
+					<form action="" class="form-custom">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Alamat Kantor">Office Address</label>
+								<input type="text" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Telpon 1">Telephone 1</label>
+								<input type="text" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Telpon 2">Telephone 2</label>
+								<input type="text" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Fax">Fax</label>
+								<input type="text" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Email">Email</label>
+								<input type="email" class="form-input">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Waktu Kerja">Working Time</label>
+								<div class="input-group" style="width: 100%; margin-bottom: 10px;">
+									<select class="form-input">
+										<option value="Monday" lang-id="Senin" selected>Monday</option>
+										<option value="Tuesday" lang-id="Selasa">Tuesday</option>
+										<option value="Wednesday" lang-id="Rabu">Wednesday</option>
+										<option value="Thursday" lang-id="Kamis">Thursday</option>
+										<option value="Friday" lang-id="Jumat">Friday</option>
+										<option value="Saturday" lang-id="Sabtu">Saturday</option>
+										<option value="Sunday" lang-id="Ahad">Sunday</option>
+									</select>
+									<span class="input-group-btn" style="width:10px;"></span>
+									<select class="form-input">
+										<option value="Monday" lang-id="Senin">Monday</option>
+										<option value="Tuesday" lang-id="Selasa">Tuesday</option>
+										<option value="Wednesday" lang-id="Rabu">Wednesday</option>
+										<option value="Thursday" lang-id="Kamis">Thursday</option>
+										<option value="Friday" lang-id="Jumat" selected>Friday</option>
+										<option value="Saturday" lang-id="Sabtu">Saturday</option>
+										<option value="Sunday" lang-id="Ahad">Sunday</option>
+									</select>
+								</div>
+
+								<div class="input-group" style="width: 100%">
+									<input type="time" class="form-input" value="08:00">
+									<span class="input-group-btn" style="width:10px;"></span>
+									<input type="time" class="form-input" value="17:00">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-8 mobile-hide">
+							<div class="form-group">
+								<label class="form-label" for="" lang-id="Google Maps">Google Maps</label>
+								<input type="text" class="form-input" id="input-map" placeholder="Embed" value='<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15894.27756395139!2d119.45797849999998!3d-5.17274355!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1466304319624" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'>
+								<div id="maps">
+									<div class="drag-disabled"></div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15894.27756395139!2d119.45797849999998!3d-5.17274355!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1466304319624" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<button class="btn-custom" lang-id="Simpan">Save</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<ul>
+				<li>
+					<span lang-id="Bahasa">Language</span>
+					<select name="lang" id="lang">
+						<option value="EN">EN</option>
+						<option value="ID">ID</option>
+					</select>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+	<div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel" lang-id="Hapus Anggota">Remove Member</h4>
+				</div>
+				
+				<div class="modal-body text-center">
+					<p lang-id="Apakah Anda yakin ingin menghapus <b id='title'></b>">Are you sure you want to delete <b id="title"></b></p>
+
+					<br>
+
+					<a href="" class="btn-custom" id="confirm" lang-id="Ya">Yes</a>
+					<a href="#" class="btn-custom white" data-dismiss="modal" lang-id="Tidak">No</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/froala_editor.min.js" ></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/align.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/char_counter.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/code_beautifier.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/code_view.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/colors.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/draggable.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/emoticons.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/entities.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/file.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/font_size.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/font_family.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/fullscreen.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/image.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/image_manager.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/line_breaker.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/inline_style.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/link.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/lists.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/paragraph_format.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/paragraph_style.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/quick_insert.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/quote.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/table.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/save.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/url.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/video.min.js"></script>
+	<script>
+		$(function(){
+			$('#edit').froalaEditor()
+		});
+	</script>
+</body>
+</html>

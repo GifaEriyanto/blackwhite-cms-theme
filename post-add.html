@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/froala_editor.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/froala_style.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/code_view.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/colors.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/emoticons.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/image_manager.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/image.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/line_breaker.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/table.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/char_counter.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/video.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/fullscreen.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/file.css">
+	<link rel="stylesheet" href="assets/libs/froala/css/plugins/quick_insert.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+</head>
+<body>
+
+	<div class="page-loader">
+		<div class="loading">Please Waiting</div>
+	</div>
+
+	<header>
+		<ul class="menu">
+			<li><a href="index.html" lang-id="Dasbor">Dashboard</a></li>
+			<li><a href="menu.html" lang-id="Menu">Menus</a></li>
+			<li><a href="master.html" lang-id="Master">Master</a></li>
+			<li><a href="about.html" lang-id="Profil">About</a></li>
+			<li class="actived"><a href="post.html" lang-id="Artikel">Post</a></li>
+			<li><a href="page.html" lang-id="Halaman">Page</a></li>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2016 Media SAKTI
+		</div>
+	</header>
+
+	<section class="main">
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#" class="toggle"></a>
+				</li>
+				<li class="dropdown"><a href="#"><span lang-id="Notif">Notif</span> <span class="badge">3</span></a>
+					<ul class="big">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Esse odio quae quis, voluptatum numquam, in.</a></li>
+						<li><a href="notification.html" lang-id="Lihat Semua">See More</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu right">
+				<li class="dropdown dropdown-right"><a href="#">Hi <b class="name">Gifa <span class="last">Eriyanto</span></b></a>
+					<ul>
+						<li><a href="account.html" lang-id="Pengaturan Akun">Account Setting</a></li>
+						<li><a href="login.html" lang-id="Keluar">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<section class="row">
+				<div class="col-md-12">
+					<div class="panel-custom">
+						<div class="panel-head">
+							<h2 class="title" lang-id="Artikel">Post</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="row">
+				<form action="" class="form-custom">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Judul">Title</label>
+							<input type="text" class="form-input">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Kategori <a href='master-categories.html' class='caption pull-right' lang-id='+ Tambah Kategori Baru'>+ Add new categories</a>">Categories <a href="master-categories.html" class="caption" lang-id="+ Tambah Kategori Baru">+ Add new categories</a></label>
+							<select name="" class="form-input">
+								<option value="" lang-id="Tanpa Kategori">Uncategories</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Label <span class='caption'>Pisahkan dengan koma(,)</span>">Tags <span class="caption">Separated by commas(,)</span></label>
+							<input type="text" class="form-input" placeholder="ex: Tag1, Tag2, Tag3">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Diskusi">Discussion</label>
+							<div class="checkbox">
+								<input type="checkbox" class="form-input" id="comment" checked>
+								<label class="form-label" for="comment" lang-id="Perbolehkan Komentar">Allow Comments</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Gambar Sampul">Cover Image</label>
+							<input type="file" class="form-input" id="img" accept="image/*">
+							<label for="img" id="img-preview"></label>
+						</div>
+					</div>
+
+					<div class="col-md-8">
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Konten">Content</label>
+							<div id="edit"></div>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<button class="btn-custom" lang-id="Publikasikan">Publish</button>&nbsp;&nbsp;
+						<button class="btn-custom white" lang-id="Simpan Draf">Save Draft</button>
+					</div>
+				</form>
+			</section>
+		</div>
+
+		<footer>
+			<ul>
+				<li>
+					<span lang-id="Bahasa">Language</span>
+					<select name="lang" id="lang">
+						<option value="EN">EN</option>
+						<option value="ID">ID</option>
+					</select>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/froala_editor.min.js" ></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/align.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/char_counter.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/code_beautifier.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/code_view.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/colors.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/draggable.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/emoticons.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/entities.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/file.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/font_size.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/font_family.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/fullscreen.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/image.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/image_manager.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/line_breaker.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/inline_style.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/link.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/lists.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/paragraph_format.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/paragraph_style.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/quick_insert.min.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/libs/froala/js/plugins/quote.min.js"></script> -->
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/table.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/save.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/url.min.js"></script>
+	<script type="text/javascript" src="assets/libs/froala/js/plugins/video.min.js"></script>
+	<script>
+		$(function(){
+			$('#edit').froalaEditor()
+		});
+	</script>
+</body>
+</html>

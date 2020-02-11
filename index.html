@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link rel="stylesheet" href="assets/libs/dropzone/dropzone.css">
+	<link rel="stylesheet" href="assets/libs/odometer/themes/odometer-theme-default.css">
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="page-loader">
+		<div class="loading">Please Waiting</div>
+	</div>
+
+	<header>
+		<ul class="menu">
+			<li class="actived"><a href="index.html" lang-id="Dasbor">Dashboard</a></li>
+			<li><a href="menu.html" lang-id="Menu">Menus</a></li>
+			<li><a href="master.html" lang-id="Master">Master</a></li>
+			<li><a href="about.html" lang-id="Profil">About</a></li>
+			<li><a href="post.html" lang-id="Artikel">Post</a></li>
+			<li><a href="page.html" lang-id="Halaman">Page</a></li>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2016 Media SAKTI
+		</div>
+	</header>
+
+	<section class="main">
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#" class="toggle"></a>
+				</li>
+				<li class="dropdown"><a href="#"><span lang-id="Notif">Notif</span> <span class="badge">3</span></a>
+					<ul class="big">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Esse odio quae quis, voluptatum numquam, in.</a></li>
+						<li><a href="notification.html" lang-id="Lihat Semua">See More</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu right">
+				<li class="dropdown dropdown-right"><a href="#">Hi <b class="name">Gifa <span class="last">Eriyanto</span></b></a>
+					<ul>
+						<li><a href="account.html" lang-id="Pengaturan Akun">Account Setting</a></li>
+						<li><a href="login.html" lang-id="Keluar">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<section class="row">
+				<div class="col-md-3 col-lg-2">
+					<div class="tile">
+						<h3 class="title" lang-id="Pengunjung Hari Ini">Visitors Today</h3>
+						<div id="visitors" class="count odometer">23129</div>
+					</div>
+
+					<div class="tile">
+						<h3 class="title" lang-id="Dilihat Hari Ini">Views Today</h3>
+						<div id="views" class="count odometer">123067</div>
+					</div>
+				</div>
+
+				<div class="col-md-9 col-lg-10 graph">
+					<p class="tag" lang-id="Statistik Pengunjung">Visitors Statistics</p>
+					<canvas id="graph" height="300"></canvas> 
+				</div>
+			</section>
+
+			<br>
+			<br>
+			<br>
+
+			<section class="row media">
+				<div class="col-md-12">
+					<h2 class="title" lang-id="<b>Pustaka</b>Media"><b>Media</b>Library</h2>
+
+					<ul class="images">
+						<li>
+							<a href="gallery-detail.html"><div class="image" style="background-image: url(assets/img/media/1.jpg);"></div></a>
+						</li>
+						<li>
+							<a href="gallery-detail.html"><div class="image" style="background-image: url(assets/img/media/2.jpg);"></div></a>
+						</li>
+						<li>
+							<a href="#" data-toggle="modal" data-target="#media">
+								<div class="image new">
+									<div class="plus"></div>
+									<span lang-id="Tambah">Add New</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<ul>
+				<li>
+					<span lang-id="Bahasa">Language</span>
+					<select name="lang" id="lang">
+						<option value="EN">EN</option>
+						<option value="ID">ID</option>
+					</select>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+	<div class="modal fade" id="media" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel" lang-id="<b>Media</b> Baru"><b>New</b>Media</h4>
+				</div>
+				
+				<div class="modal-body">
+					<form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+	<script src="assets/libs/dropzone/dropzone.js"></script>
+	<script src="assets/libs/odometer/odometer.js"></script>
+	<script>
+		window.odometerOptions = {
+			auto: false, // Don't automatically initialize everything with class 'odometer'
+			selector: '.odometer', // Change the selector used to automatically find things to be animated
+			duration: 500, // Change how long the javascript expects the CSS animation to take
+		};
+		setTimeout(function(){
+			visitors.innerHTML = 55456;
+			views.innerHTML = 123139;
+		}, 1000);
+
+
+		// Chart
+		var data = { values:[
+			{ X: "Jan", Y: 12 },
+			{ X: "Feb", Y: 28 },
+			{ X: "Mar", Y: 18 },
+			{ X: "Apr", Y: 34 },
+			{ X: "May", Y: 40 },
+			{ X: "June", Y: 43 },
+			{ X: "July", Y: 40 },
+			{ X: "August", Y: 62 },
+		]};
+		
+		chart(".graph", "#graph");
+	</script>
+</body>
+</html>

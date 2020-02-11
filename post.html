@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="page-loader">
+		<div class="loading">Please Waiting</div>
+	</div>
+
+	<header>
+		<ul class="menu">
+			<li><a href="index.html" lang-id="Dasbor">Dashboard</a></li>
+			<li><a href="menu.html" lang-id="Menu">Menus</a></li>
+			<li><a href="master.html" lang-id="Master">Master</a></li>
+			<li><a href="about.html" lang-id="Profil">About</a></li>
+			<li class="actived"><a href="post.html" lang-id="Artikel">Post</a></li>
+			<li><a href="page.html" lang-id="Halaman">Page</a></li>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2016 Media SAKTI
+		</div>
+	</header>
+
+	<section class="main">
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#" class="toggle"></a>
+				</li>
+				<li class="dropdown"><a href="#"><span lang-id="Notif">Notif</span> <span class="badge">3</span></a>
+					<ul class="big">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Esse odio quae quis, voluptatum numquam, in.</a></li>
+						<li><a href="notification.html" lang-id="Lihat Semua">See More</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu right">
+				<li class="dropdown dropdown-right"><a href="#">Hi <b class="name">Gifa <span class="last">Eriyanto</span></b></a>
+					<ul>
+						<li><a href="account.html" lang-id="Pengaturan Akun">Account Setting</a></li>
+						<li><a href="login.html" lang-id="Keluar">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<section class="row">
+				<div class="col-md-12">
+					<div class="panel-custom">
+						<div class="panel-head">
+							<h3 class="tag" lang-id="Buat tulisan menarik">Create interesting posts</h3>
+							<h2 class="title" lang-id="Artikel">Post</h2>
+
+							<a href="post-add.html" class="btn-new"><div class="plus"></div></a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+				<li role="presentation" class="active"><a href="#published" aria-controls="published" role="tab" data-toggle="tab" lang-id="Terpublikasi">Published</a></li>
+				<li role="presentation"><a href="#draft" aria-controls="draft" role="tab" data-toggle="tab" lang-id="Draf">Draft</a></li>
+				<li role="presentation"><a href="#archived" aria-controls="archived" role="tab" data-toggle="tab" lang-id="Diarsipkan">Archived</a></li>
+			</ul>
+
+			<div class="filter">
+				<form action="" class="row form-custom">
+					<div class="col-md-2 col-sm-4">
+						<select name="" class="form-input">
+							<option value="" lang-id="Urutkan berdasarkan:">Sort By:</option>
+						</select>
+					</div>
+					<div class="col-md-offset-7 col-sm-offset-4 col-md-3 col-sm-4">
+						<div class="input-group">
+							<input type="text" class="form-input" placeholder="Search...">
+							<span class="input-group-btn">
+								<button class="btn-custom" type="button"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Tab panes -->
+			<section class="row blog tab-content">
+				<div role="tabpanel" class="tab-pane active" id="published">
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/1.jpg)" data-url="assets/img/blog/1.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</p>
+							<p>Consectetur adipisicing elit. Corporis, ducimus animi laboriosam nesciunt voluptas. Sint fuga nostrum laboriosam assumenda. Eum soluta pariatur, ipsum voluptas repellat quisquam, non sint nisi, ut consequatur dolor at adipisci hic ratione omnis ex ipsa ea.</p>
+						</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="1" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/2.jpg)" data-url="assets/img/blog/2.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">Consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="2" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/3.jpg)" data-url="assets/img/blog/3.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Adipisicing elit. Ad.</a></h1>
+						<div class="desc">Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="3" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/4.jpg)" data-url="assets/img/blog/4.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">Laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="4" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/5.jpg)" data-url="assets/img/blog/5.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="5" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/6.jpg)" data-url="assets/img/blog/6.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-calendar'></i>&nbsp; 18 Juni 2016"><i class="fa fa-calendar"></i>&nbsp; 18 June 2016</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="6" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+				</div>
+
+
+				<div role="tabpanel" class="tab-pane" id="draft">
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/1.jpg)" data-url="assets/img/blog/1.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</p>
+							<p>Consectetur adipisicing elit. Corporis, ducimus animi laboriosam nesciunt voluptas. Sint fuga nostrum laboriosam assumenda. Eum soluta pariatur, ipsum voluptas repellat quisquam, non sint nisi, ut consequatur dolor at adipisci hic ratione omnis ex ipsa ea.</p>
+						</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-floppy-o'></i>&nbsp; Hari ini 11:31 AM"><i class="fa fa-floppy-o"></i>&nbsp; Today 11:31 AM</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="1" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/2.jpg)" data-url="assets/img/blog/2.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta" lang-id="<i class='fa fa-floppy-o'></i>&nbsp; Hari ini 11:31 AM"><i class="fa fa-floppy-o"></i>&nbsp; Today 11:31 AM</span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="post-add.html" lang-id="<i class='fa fa-pencil'></i>&nbsp; Sunting"><i class="fa fa-pencil"></i>&nbsp; Edit</a></span>&nbsp;&nbsp;&nbsp;
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#arsip" data-id="2" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Arsipkan"><i class="fa fa-trash-o"></i>&nbsp; Archive</a></span>
+						</div>
+					</article>
+				</div>
+
+
+				<div role="tabpanel" class="tab-pane" id="archived">
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/4.jpg)" data-url="assets/img/blog/4.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</p>
+							<p>Consectetur adipisicing elit. Corporis, ducimus animi laboriosam nesciunt voluptas. Sint fuga nostrum laboriosam assumenda. Eum soluta pariatur, ipsum voluptas repellat quisquam, non sint nisi, ut consequatur dolor at adipisci hic ratione omnis ex ipsa ea.</p>
+						</div>
+						<hr>
+						<span class="meta"><a href="#" lang-id="<i class='fa fa-reply'></i>&nbsp; Pindahkan ke Draf"><i class="fa fa-reply"></i>&nbsp; Move to Draft</a></span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="2" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+
+					<article class="col-md-4">
+						<div class="img" style="background-image: url(assets/img/blog/1.jpg)" data-url="assets/img/blog/1.jpg"></div>
+						<h1 class="title"><a href="#" data-toggle="modal" data-target="#blog" onclick="modalAjax(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad.</a></h1>
+						<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut, laborum esse voluptatibus alias, animi voluptates culpa saepe architecto vel neque repudiandae repellendus illo. Officiis sit quae sunt eum error.</div>
+						<hr>
+						<span class="meta"><a href="#" lang-id="<i class='fa fa-reply'></i>&nbsp; Pindahkan ke Draf"><i class="fa fa-reply"></i>&nbsp; Move to Draft</a></span>
+						
+						<div class="pull-right">
+							<span class="meta"><a href="#" data-toggle="modal" data-target="#hapus" data-id="2" lang-id="<i class='fa fa-trash-o'></i>&nbsp; Hapus"><i class="fa fa-trash-o"></i>&nbsp; Delete</a></span>
+						</div>
+					</article>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<ul>
+				<li>
+					<span lang-id="Bahasa">Language</span>
+					<select name="lang" id="lang">
+						<option value="EN">EN</option>
+						<option value="ID">ID</option>
+					</select>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+	<div class="modal fade" id="blog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel""></h4>
+				</div>
+				
+				<div class="modal-body">
+					<div class="modal-img"></div>
+					<div class="modal-desc"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="arsip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel" lang-id="Arsipkan Artikel">Archive Post</h4>
+				</div>
+				
+				<div class="modal-body text-center">
+					<p lang-id="Apakah Anda ingin mengarsipkan artikel dengan judul <b id='title'></b>">Are you sure you want to archive <b id="title"></b></p>
+
+					<br>
+
+					<a href="" class="btn-custom" id="confirm">Ya</a>
+					<a href="#" class="btn-custom white" data-dismiss="modal">Tidak</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel" lang-id="Hapus Artikel">Delete Post</h4>
+				</div>
+				
+				<div class="modal-body text-center">
+					<p lang-id="Apakah Anda ingin menghapus artikel dengan judul <b id='title'></b>">Are you sure you want to delete <b id="title"></b></p>
+
+					<br>
+
+					<a href="" class="btn-custom" id="confirm">Ya</a>
+					<a href="#" class="btn-custom white" data-dismiss="modal">Tidak</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="page-loader">
+		<div class="loading">Please Waiting</div>
+	</div>
+
+	<header>
+		<ul class="menu">
+			<li><a href="index.html" lang-id="Dasbor">Dashboard</a></li>
+			<li class="actived"><a href="menu.html" lang-id="Menu">Menus</a></li>
+			<li><a href="master.html" lang-id="Master">Master</a></li>
+			<li><a href="about.html" lang-id="Profil">About</a></li>
+			<li><a href="post.html" lang-id="Artikel">Post</a></li>
+			<li><a href="page.html" lang-id="Halaman">Page</a></li>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2016 Media SAKTI
+		</div>
+	</header>
+
+	<section class="main">
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#" class="toggle"></a>
+				</li>
+				<li class="dropdown"><a href="#"><span lang-id="Notif">Notif</span> <span class="badge">3</span></a>
+					<ul class="big">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Esse odio quae quis, voluptatum numquam, in.</a></li>
+						<li><a href="notification.html" lang-id="Lihat Semua">See More</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu right">
+				<li class="dropdown dropdown-right"><a href="#">Hi <b class="name">Gifa <span class="last">Eriyanto</span></b></a>
+					<ul>
+						<li><a href="account.html" lang-id="Pengaturan Akun">Account Setting</a></li>
+						<li><a href="login.html" lang-id="Keluar">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<section class="row">
+				<div class="col-md-6">
+					<div class="panel-custom">
+						<div class="panel-head">
+							<h3 class="tag" lang-id="Menu atas pada situs">The top menu on site.</h3>
+							<h2 class="title">Header Nav</h2>
+						</div>
+
+						<div class="panel-body">
+							<div class="dd" id="header">
+								<ol class="dd-list">
+									<li class="dd-item dd3-item" data-id="13">
+										<div class="dd-handle dd3-handle"></div><div class="dd3-content">Home</div>
+									</li>
+									<li class="dd-item dd3-item" data-id="14">
+										<div class="dd-handle dd3-handle"></div><div class="dd3-content">About</div>
+										<ol class="dd-list">
+											<li class="dd-item dd3-item" data-id="16">
+												<div class="dd-handle dd3-handle"></div><div class="dd3-content">Team</div>
+											</li>
+											<li class="dd-item dd3-item" data-id="17">
+												<div class="dd-handle dd3-handle"></div><div class="dd3-content">Our Mission</div>
+											</li>
+											<li class="dd-item dd3-item" data-id="18">
+												<div class="dd-handle dd3-handle"></div><div class="dd3-content">Structure</div>
+											</li>
+										</ol>
+									</li>
+									<li class="dd-item dd3-item" data-id="15">
+										<div class="dd-handle dd3-handle"></div><div class="dd3-content">Gallery</div>
+									</li>
+								</ol>
+
+								<div class="dd-new">
+									<button data-toggle="modal" data-target="#new-header" lang-id="Tambah Menu Baru">New Menu</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="panel-custom">
+						<div class="panel-head">
+							<h3 class="tag" lang-id="Menu bawah pada situs">Bottom menu on the site.</h3>
+							<h2 class="title">Footer Nav</h2>
+						</div>
+
+						<div class="panel-body">
+							<div class="dd" id="footer">
+								<ol class="dd-list">
+									<li class="dd-item dd3-item" data-id="13">
+										<div class="dd-handle dd3-handle"></div><div class="dd3-content">Home</div>
+									</li>
+									<li class="dd-item dd3-item" data-id="14">
+										<div class="dd-handle dd3-handle"></div><div class="dd3-content">About</div>
+										<ol class="dd-list">
+											<li class="dd-item dd3-item" data-id="16">
+												<div class="dd-handle dd3-handle"></div><div class="dd3-content">Team</div>
+											</li>
+											<li class="dd-item dd3-item" data-id="17">
+												<div class="dd-handle dd3-handle"></div><div class="dd3-content">Our Mission</div>
+											</li>
+											<li class="dd-item dd3-item" data-id="18">
+												<div class="dd-handle dd3-handle"></div><div class="dd3-content">Structure</div>
+											</li>
+										</ol>
+									</li>
+									<li class="dd-item dd3-item" data-id="15">
+										<div class="dd-handle dd3-handle"></div><div class="dd3-content">Gallery</div>
+									</li>
+								</ol>
+
+								<div class="dd-new">
+									<button data-toggle="modal" data-target="#new-footer" lang-id="Tambah Menu Baru">New Menu</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<ul>
+				<li>
+					<span lang-id="Bahasa">Language</span>
+					<select name="lang" id="lang">
+						<option value="EN">EN</option>
+						<option value="ID">ID</option>
+					</select>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+
+	<div class="modal fade" id="new-header" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel"><b lang-id="Menu Baru">New Menu</b> Header</h4>
+					<br>
+				</div>
+				
+				<div class="modal-body">
+					<form action="" class="form-custom">
+						<div class="form-group">
+							<label for="" lang-id="Judul Menu">Menu Title</label>
+							<input type="text" class="input-custom">
+						</div>
+
+						<div class="form-group">
+							<label for="" lang-id="Tautan">Link</label>
+							<input type="text" list="menu-header" class="input-custom" id="input-header"  oninput='header()'>
+							<datalist id="menu-header" class="datalist">
+								<option value="Home">/page/home</option>
+								<option value="About">/page/about</option>
+								<option value="Leader">/page/leader</option>
+								<option value="Our Mission">/page/our-mission</option>
+								<option value="Structur">/page/structur</option>
+								<option value="Gallery">/page/gallery</option>
+							</datalist>
+						</div>
+
+						<div class="form-group">
+							<label for="">Sub Menu</label>
+							<select class="input-custom">
+								<option value="" lang-id="Bukan Sub Menu">Not Sub Menu</option>
+								<option value="/page/home">Home</option>
+								<option value="/page/about">About</option>
+								<option value="/page/leader">Leader</option>
+								<option value="/page/our-mission">Our Mission</option>
+								<option value="/page/structur">Structur</option>
+								<option value="/page/gallery">Gallery</option>
+							</select>
+						</div>
+
+						<br>
+
+						<button class="btn-custom pull-right" lang-id="Tambah Menu">Add Menu</button>
+
+						<div class="clearfix"></div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="new-footer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+				
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel"><b lang-id="Menu Baru">New Menu</b> Footer</h4>
+					<br>
+				</div>
+				
+				<div class="modal-body">
+					<form action="" class="form-custom">
+						<div class="form-group">
+							<label for="" lang-id="Judul Menu">Menu Title</label>
+							<input type="text" class="input-custom">
+						</div>
+
+						<div class="form-group">
+							<label for="" lang-id="Tautan">Link</label>
+							<input type="text" list="menu-footer" class="input-custom" id="input-footer"  oninput='footer()'>
+							<datalist id="menu-footer" class="datalist">
+								<option value="Home">/page/home</option>
+								<option value="About">/page/about</option>
+								<option value="Leader">/page/leader</option>
+								<option value="Our Mission">/page/our-mission</option>
+								<option value="Structur">/page/structur</option>
+								<option value="Gallery">/page/gallery</option>
+							</datalist>
+						</div>
+
+						<div class="form-group">
+							<label for="">Sub Menu</label>
+							<select class="input-custom">
+								<option value="" lang-id="Bukan Sub Menu">Not Sub Menu</option>
+								<option value="/page/home">Home</option>
+								<option value="/page/about">About</option>
+								<option value="/page/leader">Leader</option>
+								<option value="/page/our-mission">Our Mission</option>
+								<option value="/page/structur">Structur</option>
+								<option value="/page/gallery">Gallery</option>
+							</select>
+						</div>
+
+						<br>
+
+						<button class="btn-custom pull-right" lang-id="Tambah Menu">Add Menu</button>
+
+						<div class="clearfix"></div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+	<script src="assets/libs/nestable/jquery.nestable.js"></script>
+	<link rel="stylesheet" href="assets/libs/nestable/jquery.nestable.css">
+	<script>
+
+		$(document).ready(function()
+		{
+
+			$('#nestable-menu').on('click', function(e)
+			{
+				var target = $(e.target),
+					action = target.data('action');
+				if (action === 'expand-all') {
+					$('.dd').nestable('expandAll');
+				}
+				if (action === 'collapse-all') {
+					$('.dd').nestable('collapseAll');
+				}
+			});
+
+			$('#header, #footer').nestable();
+
+
+		});
+
+		function header() {
+			var val = document.getElementById("input-header").value;
+			var opts = document.getElementById('menu-header').childNodes;
+			
+			for (var i = 0; i < opts.length; i++) {
+				if (opts[i].value === val) {
+					// An item was selected from the list!
+					// yourCallbackHere()
+					$("#input-header").val(opts[i].text);
+					break;
+				}
+			}
+		}
+
+		function footer() {
+			var val = document.getElementById("input-footer").value;
+			var opts = document.getElementById('menu-footer').childNodes;
+			
+			for (var i = 0; i < opts.length; i++) {
+				if (opts[i].value === val) {
+					// An item was selected from the list!
+					// yourCallbackHere()
+					$("#input-footer").val(opts[i].text);
+					break;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

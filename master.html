@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="page-loader">
+		<div class="loading">Please Waiting</div>
+	</div>
+
+	<header>
+		<ul class="menu">
+			<li><a href="index.html" lang-id="Dasbor">Dashboard</a></li>
+			<li><a href="menu.html" lang-id="Menu">Menus</a></li>
+			<li class="actived"><a href="master.html" lang-id="Master">Master</a></li>
+			<li><a href="about.html" lang-id="Profil">About</a></li>
+			<li><a href="post.html" lang-id="Artikel">Post</a></li>
+			<li><a href="page.html" lang-id="Halaman">Page</a></li>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2016 Media SAKTI
+		</div>
+	</header>
+
+	<section class="main">
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#" class="toggle"></a>
+				</li>
+				<li class="dropdown"><a href="#"><span lang-id="Notif">Notif</span> <span class="badge">3</span></a>
+					<ul class="big">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Esse odio quae quis, voluptatum numquam, in.</a></li>
+						<li><a href="notification.html" lang-id="Lihat Semua">See More</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu right">
+				<li class="dropdown dropdown-right"><a href="#">Hi <b class="name">Gifa <span class="last">Eriyanto</span></b></a>
+					<ul>
+						<li><a href="account.html" lang-id="Pengaturan Akun">Account Setting</a></li>
+						<li><a href="login.html" lang-id="Keluar">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<section class="row">
+				<div class="col-md-12">
+					<div class="panel-custom">
+						<div class="panel-head">
+							<h3 class="tag" lang-id="Informasi dasar situs Anda">Basic information of your site</h3>
+							<h2 class="title">Master Data</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="row">
+				<form action="" class="form-custom">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Nama Situs">Site Name</label>
+							<input type="text" class="form-input">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Deskripsi Situs">Site Description</label>
+							<textarea rows="5" class="form-input"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Kata Kunci <span class='caption'>Pisahkan dengan koma(,)</span>">Keyword <span class="caption">Separated by commas(,)</span></label>
+							<input type="text" class="form-input" placeholder="ex: keyword1, keyword2, keyword3">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Gambar Media Sosial <span class='caption'>Ketika dibagikan</span>">Social Media Image <span class="caption">When shared</span></label>
+							<input type="file" class="form-input" id="img" accept="image/*">
+							<label for="img" id="img-preview"></label>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Format Tanggal">Date Format</label>
+							<select class="form-input">
+								<option value="dd M yyyy" lang-id="7 Juni 2016">7 Juny 2016</option>
+								<option value="yyyy-mm-dd">2016-6-7</option>
+								<option value="dd-mm-yyyy">7-6-2016</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="" lang-id="Zona Waktu">Timezone</label>
+							<select class="form-input">
+								<option value="WIB">WIB</option>
+								<option value="WITA">WITA</option>
+								<option value="WIT">WIT</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<button class="btn-custom" lang-id="Simpan">Save</button>
+					</div>
+				</form>
+			</section>
+		</div>
+
+		<footer>
+			<ul>
+				<li>
+					<span lang-id="Bahasa">Language</span>
+					<select name="lang" id="lang">
+						<option value="EN">EN</option>
+						<option value="ID">ID</option>
+					</select>
+				</li>
+			</ul>
+		</footer>
+	</section>
+
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+</body>
+</html>

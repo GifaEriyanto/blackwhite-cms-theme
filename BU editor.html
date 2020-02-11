@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Simple CMS</title>
+	<link rel="stylesheet" href="assets/libs/dropzone/dropzone.css">
+	<link rel="stylesheet" href="assets/libs/odometer/themes/odometer-theme-default.css">
+	<link href="assets/css/simplecms.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	
+	<div class="editor">
+		<div class="control">
+			<button type="button" data-control="html">HTML</button>
+			&nbsp;&nbsp;
+			<button type="button" data-control="bold"><b>B</b></button>
+			<button type="button" data-control="italic"><i>I</i></button>
+			<button type="button" data-control="underline"><u>U</u></button>
+			&nbsp;&nbsp;
+			<button type="button" data-control="link"><i class="fa fa-link"></i></button>
+			<input type="text" name="link" placeholder="URL">
+			&nbsp;&nbsp;
+			<button type="button" data-control="list-ul"><i class="fa fa-list-ul"></i></button>
+			<button type="button" data-control="list-ol"><i class="fa fa-list-ol"></i></button>
+			&nbsp;&nbsp;
+			<button type="button" data-control="align-left"><i class="fa fa-align-left"></i></button>
+			<button type="button" data-control="align-center"><i class="fa fa-align-center"></i></button>
+			<button type="button" data-control="align-right"><i class="fa fa-align-right"></i></button>
+			<button type="button" data-control="align-justify"><i class="fa fa-align-justify"></i></button>
+		</div>
+
+		<div class="editable form-input"></div>
+	</div>
+
+
+
+	<!-- js for doc -->
+	<script src="assets/js/simplecms.js"></script>
+	<script src="assets/js/lang.js"></script>
+</body>
+</html>
